@@ -15,10 +15,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/itrootvm/sequelize-mtm.git"
+    "url": "https://github.com/itrootvm/sequelize-mtm-cli.git"
   },
   "bugs": {
-    "url": "https://github.com/itrootvm/sequelize-mtm/issues"
+    "url": "https://github.com/itrootvm/sequelize-mtm-cli/issues"
   },
   "main": "./dist/src/index.js",
   "bin": "./dist/src/bin/index.js",
