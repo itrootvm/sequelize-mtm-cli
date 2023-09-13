@@ -1,9 +1,11 @@
 {
-    "name": "sequelize-mtm",
-    "description": "Sequelize Model to Migration tool",
+    "name": "sequelize-mtm-cli",
+    "description": "Sequelize Model to Migration cli tool",
     "keywords": [
         "sequelize",
-        "cli"
+        "cli",
+        "migration",
+        "model"
     ],
     "version": "0.0.2",
     "license": "MIT",
