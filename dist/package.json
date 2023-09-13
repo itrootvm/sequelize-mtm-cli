@@ -1,0 +1,58 @@
+{
+    "name": "sequelize-mtm",
+    "description": "Sequelize Model to Migration tool",
+    "keywords": [
+        "sequelize",
+        "cli"
+    ],
+    "version": "0.0.2",
+    "license": "MIT",
+    "author": {
+        "name": "itrootvm",
+        "url": "https://github.com/itrootvm/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/itrootvm/sequelize-mtm.git"
+    },
+    "bugs": {
+        "url": "https://github.com/itrootvm/sequelize-mtm/issues"
+    },
+    "main": "./dist/src/index.js",
+    "bin": "./dist/src/bin/index.js",
+    "files": [
+        "dist"
+    ],
+    "engines": {
+        "node": ">16.0.0"
+    },
+    "devDependencies": {
+        "@types/lodash": "^4.14.197",
+        "@types/node": "^20.4.5",
+        "@types/sequelize": "^4.28.15",
+        "gts": "^5.0.0",
+        "standard-version": "^9.5.0",
+        "ts-node": "^10.9.1",
+        "typescript": "~5.1.6"
+    },
+    "scripts": {
+        "lint": "gts lint",
+        "clean": "gts clean",
+        "compile": "rm -rf ./dist && tsc && cp -r ./templates ./dist/",
+        "fix": "gts fix",
+        "prepare": "npm run compile",
+        "pretest": "npm run compile",
+        "prelocal": "npm run compile",
+        "posttest": "npm run lint",
+        "postcompile": "npm run copy:templates",
+        "test:cli": "ts-node ./src/bin/index.ts -s ./example/dist/db/models/index.js -m ./example/db/migrations/models.json",
+        "copy:templates": "cp -r ./templates ./dist/"
+    },
+    "dependencies": {
+        "commander": "^11.0.0",
+        "consola": "^3.2.3",
+        "handlebars": "^4.7.8",
+        "lodash": "^4.17.21",
+        "sequelize": "^6.32.1"
+    }
+}
