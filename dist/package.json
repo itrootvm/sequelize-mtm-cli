@@ -40,7 +40,7 @@
     "scripts": {
         "lint": "gts lint",
         "clean": "gts clean",
-        "compile": "rm -rf ./dist && tsc && cp -r ./templates ./dist/",
+        "compile": "rm -rf ./dist && tsc",
         "fix": "gts fix",
         "prepare": "npm run compile",
         "pretest": "npm run compile",
