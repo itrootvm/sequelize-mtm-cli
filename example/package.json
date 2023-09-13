@@ -23,7 +23,7 @@
     "dev": "ts-node ./index.ts",
     "start": "node ./dist/index.js",
     "premake:migrations": "npm compile",
-    "make:migrations": "sequelize-mtm -s ./dist/db/models/index.js -m ./db/migrations",
+    "make:migrations": "sequelize-mtm-cli -s ./dist/db/models/index.js -m ./db/migrations",
     "run:migrations": "sequelize-cli db:migrate"
   }
 }

@@ -7,7 +7,7 @@ supports `createTable`, `removeTable`, `addColumn`, `modifyColumn`, `removeColum
 Using npm:
 
 ```bash
-npm i sequelize-mtm --save-dev
+npm i sequelize-mtm-cli --save-dev
 ```
 
 ## Getting started
@@ -32,7 +32,7 @@ npm i sequelize-mtm --save-dev
   };
   ```
 
-- **Use sequelize-mtm cli**
+- **Use sequelize-mtm-cli cli**
 
   add `make:migration` script to your `package.json`
 
@@ -41,7 +41,7 @@ npm i sequelize-mtm --save-dev
     ...
     "scripts": {
       ...
-      "make:migrations": "sequelize-mtm -s ./models/init.js",
+      "make:migrations": "sequelize-mtm-cli -s ./models/init.js",
       "run:migrations": "sequelize-cli db:migrate"
     }
   }
@@ -67,7 +67,7 @@ example:
         ...
         "compile": "tsc",
         "premake:migrations": "npm compile",
-        "make:migrations": "sequelize-mtm -s ./dist/db/models/init.js -m ./db/migrations",
+        "make:migrations": "sequelize-mtm-cli -s ./dist/db/models/init.js -m ./db/migrations",
         "run:migrations": "sequelize-cli db:migrate"
     }
 }
@@ -82,7 +82,7 @@ OR with a model file provided:
         ...
         "compile": "tsc",
         "premake:migrations": "npm compile",
-        "make:migrations": "sequelize-mtm -s ./dist/db/models/init.js -m ./db/migrations/model.json",
+        "make:migrations": "sequelize-mtm-cli -s ./dist/db/models/init.js -m ./db/migrations/model.json",
         "run:migrations": "sequelize-cli db:migrate"
     }
 }
