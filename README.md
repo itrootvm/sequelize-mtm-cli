@@ -41,7 +41,7 @@ npm i sequelize-mtm-cli --save-dev
     ...
     "scripts": {
       ...
-      "make:migrations": "sequelize-mtm-cli -s ./models/init.js",
+      "make:migrations": "sequelize-mtm-cli -s ./models/init.js -m ./db/migrations",
       "run:migrations": "sequelize-cli db:migrate"
     }
   }
