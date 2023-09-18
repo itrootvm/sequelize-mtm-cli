@@ -14,15 +14,18 @@
     "@types/express": "^4.17.17",
     "@types/node": "^20.5.3",
     "@types/sequelize": "^4.28.15",
+    "ncp": "^2.0.0",
+    "rimraf": "^5.0.1",
     "sequelize-cli": "^6.6.1",
+    "sequelize-mtm-cli": "^0.0.4",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6"
   },
   "scripts": {
-    "compile": "rm -r ./dist && tsc",
+    "compile": "rimraf ./dist && tsc",
     "dev": "ts-node ./index.ts",
     "start": "node ./dist/index.js",
-    "premake:migrations": "npm compile",
+    "premake:migrations": "npm run compile",
     "make:migrations": "sequelize-mtm-cli -s ./dist/db/models/index.js -m ./db/migrations",
     "run:migrations": "sequelize-cli db:migrate"
   }
